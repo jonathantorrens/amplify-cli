@@ -148,8 +148,6 @@ export const launch = async (
     });
   }
 
-  console.log("launch3")
-
   let { port } = { ...defaultOptions, ...givenOptions };
   if (!port) {
     port = await detectPort(basePort);
@@ -162,7 +160,6 @@ export const launch = async (
       });
     }
   }
-  console.log("launch4")
 
   const opts: Required<OpenSearchEmulatorOptions> = { ...defaultOptions, ...givenOptions, port };
 
