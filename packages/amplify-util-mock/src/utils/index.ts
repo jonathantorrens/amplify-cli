@@ -23,9 +23,7 @@ export const checkJavaVersion = async (context) => {
   if (executablePath === null) {
     context.print.error(`Unable to find Java version ${minJavaVersion} on the path. Download link: https://amzn.to/2UUljp9`);
   }
-
   const result = execa.sync('java', ['-version']);
-
   if (result.exitCode !== 0) {
     context.print.error(`java failed, exit code was ${result.exitCode}`);
   }
