@@ -160,7 +160,6 @@ export const launch = async (
       });
     }
   }
-
   const opts: Required<OpenSearchEmulatorOptions> = { ...defaultOptions, ...givenOptions, port };
 
   const args = buildArgs(opts, pathToOpenSearchData);
